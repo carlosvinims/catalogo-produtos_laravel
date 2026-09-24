@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Products extends Model
+class Product extends Model
 {
     use HasFactory;
 
@@ -20,8 +20,8 @@ class Products extends Model
         'is_active',
     ];
 
-    public function Categories()
+    public function category()
     {
-        return $this->belongsTo(Categories::class);
+        return $this->belongsTo(Category::class);
     }
 }
